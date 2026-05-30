@@ -3,14 +3,6 @@ import { existsSync } from "fs";
 import path from "path";
 import ProductCan from "./ProductCan";
 
-const hasProductImage = existsSync(
-  path.join(process.cwd(), "public", "eigen-can.png")
-) || existsSync(
-  path.join(process.cwd(), "public", "eigen-can.jpg")
-) || existsSync(
-  path.join(process.cwd(), "public", "eigen-can.webp")
-);
-
 function getImageSrc() {
   if (existsSync(path.join(process.cwd(), "public", "eigen-can.png"))) return "/eigen-can.png";
   if (existsSync(path.join(process.cwd(), "public", "eigen-can.jpg"))) return "/eigen-can.jpg";
@@ -36,7 +28,7 @@ export default function Hero() {
               One work block.
             </h1>
             <p className="text-lg text-zinc-500 font-light leading-relaxed max-w-md">
-              Nicotine-free focus pouches for studying, coding, writing, and building.
+              Nicotine-free focus pouches built for studying, coding, writing, and building.
             </p>
           </div>
 
@@ -45,7 +37,7 @@ export default function Hero() {
               href="#buy"
               className="bg-zinc-900 text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-zinc-700 transition-all duration-150 hover:scale-[1.02] active:scale-[0.98]"
             >
-              Buy EIGEN
+              Join first drop
             </a>
             <a
               href="#how-it-works"

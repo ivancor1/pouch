@@ -6,15 +6,15 @@ import ProductCan from "./ProductCan";
 export default function PurchaseCard() {
   const [qty, setQty] = useState(1);
   const [plan, setPlan] = useState<"one-time" | "subscribe">("one-time");
-  const [added, setAdded] = useState(false);
+  const [reserved, setReserved] = useState(false);
 
   const basePrice = 24;
   const unitPrice = plan === "subscribe" ? basePrice * 0.85 : basePrice;
   const total = (unitPrice * qty).toFixed(2);
 
-  const handleAdd = () => {
-    setAdded(true);
-    setTimeout(() => setAdded(false), 2200);
+  const handleReserve = () => {
+    setReserved(true);
+    setTimeout(() => setReserved(false), 2200);
   };
 
   return (
@@ -24,13 +24,23 @@ export default function PurchaseCard() {
           <div className="bg-white rounded-3xl border border-zinc-100 shadow-sm p-8 space-y-6">
             {/* Header row */}
             <div className="flex items-start justify-between gap-4">
-              <div>
-                <h2 className="text-zinc-900 font-medium text-base tracking-wide">
-                  EIGEN Focus Pouches
-                </h2>
-                <p className="text-zinc-400 text-sm mt-1">
-                  Mint &middot; 15 focus sessions per can
-                </p>
+              <div className="space-y-3">
+                <div>
+                  <h2 className="text-zinc-900 font-medium text-base tracking-wide">
+                    EIGEN Focus Pouches
+                  </h2>
+                  <p className="text-zinc-400 text-sm mt-1">15 work blocks per can</p>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {["Mint", "Nicotine-free", "Sugar-free"].map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[11px] text-zinc-500 bg-zinc-50 border border-zinc-100 px-2.5 py-1 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
               <div className="shrink-0">
                 <ProductCan size="sm" />
@@ -95,9 +105,7 @@ export default function PurchaseCard() {
                   </div>
                   <span
                     className={`text-sm ${
-                      plan === opt.value
-                        ? "text-zinc-900 font-medium"
-                        : "text-zinc-400"
+                      plan === opt.value ? "text-zinc-900 font-medium" : "text-zinc-400"
                     }`}
                   >
                     {opt.sublabel}
@@ -130,22 +138,22 @@ export default function PurchaseCard() {
               </div>
             </div>
 
-            {/* Add to cart */}
+            {/* CTA */}
             <button
-              onClick={handleAdd}
-              disabled={added}
+              onClick={handleReserve}
+              disabled={reserved}
               className={`w-full py-4 rounded-2xl text-sm font-medium transition-all duration-200 ${
-                added
+                reserved
                   ? "bg-zinc-100 text-zinc-500 cursor-default"
                   : "bg-zinc-900 text-white hover:bg-zinc-700 active:scale-[0.99] hover:scale-[1.005]"
               }`}
             >
-              {added ? "Added to cart ✓" : `Add to cart · $${total}`}
+              {reserved ? "Reserved ✓" : `Reserve your can · $${total}`}
             </button>
 
             {/* Trust line */}
             <p className="text-center text-xs text-zinc-400 leading-relaxed">
-              Nicotine-free. Sugar-free. Designed for deep work.
+              Nicotine-free. Sugar-free. Designed for focused work.
             </p>
           </div>
         </div>

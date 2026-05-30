@@ -2,17 +2,17 @@ const steps = [
   {
     n: "01",
     title: "Pop one in",
-    desc: "Place the pouch comfortably between your gum and lip. No water, no prep, no ritual required. It takes a few seconds.",
+    desc: "Place the pouch between your gum and lip. No drink, no setup. It takes a few seconds.",
   },
   {
     n: "02",
     title: "Lock into your work block",
-    desc: "The ingredients take effect gradually. Use the pouch as a signal to yourself: it's time to focus. Open your work. Start.",
+    desc: "The ingredients take effect gradually. Use it as a cue: work starts now. Open your task. Begin.",
   },
   {
     n: "03",
     title: "Dispose after 20–45 min",
-    desc: "Remove and dispose of the pouch when you're ready. The session continues.  The pouch was just how you began.",
+    desc: "Remove and dispose when you're ready. The work block continues. The pouch was just how you started.",
   },
 ];
 
@@ -46,8 +46,8 @@ export default function HowItWorks() {
         <div className="mt-10 p-6 rounded-2xl border border-zinc-800/60 bg-zinc-800/20 max-w-2xl">
           <p className="text-zinc-500 text-sm font-light leading-relaxed">
             <span className="text-zinc-400 font-medium">Note:</span> The pouch does not need to
-            stay in for the entire work session. It is designed as a ritual, something that helps
-            you begin, not something that lasts the whole time.
+            stay in for the entire work session. It is designed to help start a focused work block,
+            not to stay in all day.
           </p>
         </div>
       </div>

@@ -2,21 +2,22 @@ import { CheckIcon, XIcon } from "./icons";
 
 const features = [
   "No nicotine",
+  "No nicotine dependence",
   "No sugar",
   "No drink required",
   "Mess-free",
-  "Designed for work sessions",
+  "Built for work sessions",
   "No jittery edge",
 ];
 
 type TriBool = true | false | null;
 
 const products: { name: string; values: TriBool[]; highlight?: boolean }[] = [
-  { name: "EIGEN", values: [true, true, true, true, true, true], highlight: true },
-  { name: "Coffee", values: [true, false, false, false, false, false] },
-  { name: "Energy drink", values: [true, false, false, true, false, false] },
-  { name: "Nicotine pouch", values: [false, true, true, true, false, null] },
-  { name: "Generic caffeine", values: [true, true, true, true, false, null] },
+  { name: "EIGEN",           values: [true,  true,  true,  true,  true,  true,  true],  highlight: true },
+  { name: "Coffee",          values: [true,  true,  false, false, false, false, false] },
+  { name: "Energy drink",    values: [true,  true,  false, false, true,  false, false] },
+  { name: "Nicotine pouch",  values: [false, false, true,  true,  true,  false, null]  },
+  { name: "Generic caffeine",values: [true,  true,  true,  true,  true,  false, null]  },
 ];
 
 function Cell({ val, highlight }: { val: TriBool; highlight?: boolean }) {
@@ -50,7 +51,7 @@ export default function Comparison() {
             Why EIGEN
           </p>
           <h2 className="text-4xl font-light text-zinc-900 leading-snug tracking-tight">
-            Designed for work, not caffeine delivery.
+            Not nicotine. Not another energy drink. Built for work.
           </h2>
           <p className="text-zinc-500 font-light mt-4 text-sm leading-relaxed max-w-sm">
             Most focus products are built for athletes or gamers. EIGEN is built for people with
@@ -59,16 +60,13 @@ export default function Comparison() {
         </div>
 
         <div className="overflow-x-auto -mx-6 px-6">
-          <div className="min-w-[560px]">
+          <div className="min-w-[600px]">
             <table className="w-full border-collapse">
               <thead>
                 <tr>
                   <th className="text-left pb-6 text-sm text-zinc-400 font-normal w-44" />
                   {products.map((p, i) => (
-                    <th
-                      key={i}
-                      className="pb-6 text-center"
-                    >
+                    <th key={i} className="pb-6 text-center">
                       {p.highlight ? (
                         <span className="inline-block bg-zinc-900 text-white px-4 py-1.5 rounded-full text-xs font-medium tracking-wide">
                           {p.name}
@@ -87,9 +85,7 @@ export default function Comparison() {
                     {products.map((p, pi) => (
                       <td
                         key={pi}
-                        className={`py-4 text-center ${
-                          p.highlight ? "bg-zinc-50" : ""
-                        } ${
+                        className={`py-4 text-center ${p.highlight ? "bg-zinc-50" : ""} ${
                           p.highlight && fi === 0 ? "rounded-t-xl" : ""
                         } ${
                           p.highlight && fi === features.length - 1 ? "rounded-b-xl" : ""

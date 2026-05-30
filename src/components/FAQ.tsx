@@ -6,27 +6,31 @@ import { ChevronDown } from "./icons";
 const faqs = [
   {
     q: "Does EIGEN contain nicotine?",
-    a: "No. EIGEN is completely nicotine-free. There is no tobacco or nicotine of any kind in EIGEN pouches. The product was designed specifically to offer a clean focus ritual without dependency risk.",
+    a: "No. EIGEN is nicotine-free by design. We do not use nicotine because focus should not come with nicotine dependence.",
+  },
+  {
+    q: "Is EIGEN addictive?",
+    a: "EIGEN contains no nicotine. Some formulations contain caffeine, which can create tolerance in some users over time. Follow the serving guidance and be mindful of your own caffeine sensitivity.",
   },
   {
     q: "How long do I keep it in?",
-    a: "Most people use it for 20–45 minutes. You don't need to keep it in for your entire work session. EIGEN is designed as a ritual to help you begin, not something to use all day. Remove it when you're ready.",
+    a: "Use one pouch for 20–45 minutes. It is designed to help start a focused work block, not to stay in your mouth all day. Remove it when you're ready and continue working.",
   },
   {
     q: "How much caffeine is in one pouch?",
-    a: "Each EIGEN pouch contains a moderate amount of caffeine, comparable to about half a cup of coffee. We recommend not exceeding two pouches per day, and avoiding use close to bedtime. If you are sensitive to caffeine or have a medical condition, consult a healthcare professional before use.",
+    a: "Each EIGEN pouch contains a moderate amount of caffeine, comparable to about half a cup of coffee. We recommend not exceeding two pouches per day, and avoiding use close to bedtime. Consult a healthcare professional if you have a medical condition or caffeine sensitivity.",
   },
   {
     q: "Is this for studying?",
-    a: "Yes, studying is one of EIGEN's primary use cases. But it's designed broadly for any focused work: coding, writing, financial analysis, building. Anywhere you need to sit down and produce something.",
+    a: "Yes. Studying is one of EIGEN's primary use cases. It is also built for coding, writing, financial analysis, and any focused work where you need to sit down and produce something.",
   },
   {
     q: "How many pouches come in a can?",
-    a: "Each can contains 15 pouches, enough for 15 focus sessions.",
+    a: "Each can contains 15 pouches — 15 work blocks.",
   },
   {
     q: "Can I use more than one per day?",
-    a: "You can use up to two pouches per day. We recommend spacing them out by several hours and paying attention to how you personally respond to caffeine. Do not exceed two per day.",
+    a: "You can use up to two pouches per day. Space them out by several hours and pay attention to how you respond to caffeine. Do not exceed two per day.",
   },
 ];
 
@@ -46,7 +50,7 @@ function FAQItem({ faq }: { faq: { q: string; a: string } }) {
       </button>
       <div
         className={`overflow-hidden transition-all duration-200 ${
-          open ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
+          open ? "max-h-56 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <p className="text-zinc-500 text-sm font-light leading-relaxed pb-5 pr-8">{faq.a}</p>
