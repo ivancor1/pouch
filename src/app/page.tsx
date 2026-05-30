@@ -1,30 +1,25 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import PurchaseCard from "@/components/PurchaseCard";
-import DeepWork from "@/components/DeepWork";
-import HowItWorks from "@/components/HowItWorks";
+import WhatItDoes from "@/components/WhatItDoes";
 import WorkBlockEquation from "@/components/WorkBlockEquation";
 import WhyNoNicotine from "@/components/WhyNoNicotine";
 import Ingredients from "@/components/Ingredients";
-import Comparison from "@/components/Comparison";
-import Waitlist from "@/components/Waitlist";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
-function FuckAdderall() {
+function WorkBlockBridge() {
   return (
-    <div className="border-y border-zinc-100 py-10 overflow-hidden bg-white">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+    <div className="py-14 border-t border-zinc-100 bg-white">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col items-center text-center gap-3">
         <p
-          className="text-zinc-900 text-2xl md:text-3xl font-light tracking-tight"
-          style={{ letterSpacing: "-0.01em" }}
+          className="text-zinc-400 text-sm"
+          style={{ fontFamily: "ui-monospace, Menlo, monospace" }}
         >
-          F*ck Adderall.
+          One pouch = one work block.
         </p>
-        <p className="text-zinc-400 text-sm font-light leading-relaxed max-w-sm">
-          No prescription. No crash. No dependence. Just a clean start to a work block — whenever
-          you need one.
-        </p>
+        <div className="w-px h-6 bg-zinc-200" />
+        <p className="text-zinc-500 text-sm font-light">So what is a work block?</p>
       </div>
     </div>
   );
@@ -36,14 +31,11 @@ export default function Home() {
       <Nav />
       <Hero />
       <PurchaseCard />
-      <FuckAdderall />
-      <DeepWork />
-      <HowItWorks />
+      <WhatItDoes />
+      <WorkBlockBridge />
       <WorkBlockEquation />
       <WhyNoNicotine />
       <Ingredients />
-      <Comparison />
-      <Waitlist />
       <FAQ />
       <Footer />
     </main>

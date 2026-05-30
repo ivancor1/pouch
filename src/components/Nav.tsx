@@ -21,7 +21,7 @@ export default function Nav() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 group">
+        <a href="#" className="flex items-center gap-2">
           <WaveLogo className="w-6 h-4 text-zinc-900" />
           <span className="font-medium tracking-[0.28em] text-zinc-900 text-sm">EIGEN</span>
         </a>
@@ -40,9 +40,9 @@ export default function Nav() {
 
         <a
           href="#buy"
-          className="bg-zinc-900 text-white text-sm px-5 py-2 rounded-full hover:bg-zinc-700 transition-all duration-150 font-medium hover:scale-[1.02] active:scale-[0.98]"
+          className="bg-zinc-900 text-white text-sm px-5 py-2 rounded-full hover:bg-zinc-700 transition-all duration-150 font-medium"
         >
-          Buy EIGEN
+          Join first drop
         </a>
       </div>
     </nav>
