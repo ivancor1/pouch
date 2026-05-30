@@ -1,6 +1,7 @@
 const items = [
   { name: "Caffeine", role: "Measured lift" },
   { name: "L-Theanine", role: "Calm support" },
+  { name: "Theacrine", role: "Sustained energy" },
   { name: "Citicoline", role: "Cognitive support" },
   { name: "B Vitamins", role: "Energy metabolism" },
 ];
@@ -19,7 +20,8 @@ export default function Ingredients() {
               What&apos;s in it.
             </h2>
             <p className="text-zinc-500 font-light text-sm leading-relaxed max-w-xs">
-              Final formula and dosage will be published before launch.
+              Final formula and exact dosages will be published before launch — we&apos;re
+              still optimizing.
             </p>
             <p className="text-zinc-400 text-xs mt-6 leading-relaxed max-w-xs">
               These statements have not been evaluated by the FDA. Not intended to diagnose,
