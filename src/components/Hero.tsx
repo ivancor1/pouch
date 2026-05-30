@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="space-y-8">
           <div className="space-y-5">
             <p className="text-zinc-400 tracking-[0.22em] text-xs font-medium uppercase">
-              Nicotine-free &middot; Sugar-free
+              For students, coders, and builders
             </p>
             <h1 className="text-5xl md:text-6xl lg:text-[4rem] font-light text-zinc-900 leading-[1.05] tracking-tight">
               One pouch{" "}
@@ -32,10 +32,11 @@ export default function Hero() {
               one work block.
             </h1>
             <p className="text-lg text-zinc-500 font-light leading-relaxed max-w-md">
-              Nicotine-free focus pouches for studying, coding, writing, and building.
+              A nicotine-free focus pouch for the problem set, the coding sprint, and the
+              late-night build.
             </p>
             <p className="text-sm text-zinc-400 font-light">
-              No nicotine. No sugar. No drink required.
+              No nicotine. No sugar. No prescription required.
             </p>
           </div>
 

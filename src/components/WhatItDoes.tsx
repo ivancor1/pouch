@@ -33,6 +33,9 @@ export default function WhatItDoes() {
               Use one before a study block, coding sprint, writing session, or late-night build.
               The pouch helps you begin — the work does the rest.
             </p>
+            <p className="text-zinc-400 font-light text-sm mt-4 max-w-sm">
+              No prescription. No crash. No dependency.
+            </p>
           </div>
 
           {/* Right: steps */}

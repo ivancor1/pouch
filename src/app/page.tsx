@@ -8,6 +8,18 @@ import Ingredients from "@/components/Ingredients";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
+function FuckAdderall() {
+  return (
+    <div className="border-t border-b border-zinc-100 py-12">
+      <div className="max-w-6xl mx-auto px-6">
+        <p className="text-zinc-900 text-4xl md:text-5xl font-light tracking-tight">
+          F*ck Adderall.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function WorkBlockBridge() {
   return (
     <div className="py-14 border-t border-zinc-100 bg-white">
@@ -31,6 +43,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <PurchaseCard />
+      <FuckAdderall />
       <WhatItDoes />
       <WorkBlockBridge />
       <WorkBlockEquation />
